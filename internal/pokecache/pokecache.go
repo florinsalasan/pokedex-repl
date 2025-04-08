@@ -25,7 +25,7 @@ func NewCache(interval time.Duration) *Cache {
 }
 
 func (c *Cache) Add(key string, val []byte) {
-    fmt.Println("adding key-val to cache")
+    // fmt.Println("adding key-val to cache")
     newEntry := cacheEntry{val: val, createdAt: time.Now()}
     c.mu.Lock()
     defer c.mu.Unlock()
